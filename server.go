@@ -18,9 +18,9 @@ func main() {
 	serverStruct := chat.Server{}
 
 	gRPCserver := grpc.NewServer()
+
+	chat.RegisterChatServiceServer(gRPCserver, &serverStruct)
 	if err := gRPCserver.Serve(listener); err != nil {
 		log.Fatalf("Failed to serve")
 	}
-	chat.RegisterChatServiceServer(gRPCserver, &serverStruct)
-
 }

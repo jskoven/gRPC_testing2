@@ -7,5 +7,5 @@ message message{
 }
 
 service chatService{
-    
+    rpc SendFunction(message) returns (message){}
 }
