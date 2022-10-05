@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = "github.com/jskoven/gRPC_testing2/chat";
+package chat;
+
+message message{
+    string body = 1;
+}
+
+service chatService{
+    
+}
