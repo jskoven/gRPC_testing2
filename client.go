@@ -10,7 +10,7 @@ import (
 
 func main() {
 	var connection *grpc.ClientConn
-	connection, err := grpc.Dial(":9000", grpc.WithInsecure())
+	connection, err := grpc.Dial("192.168.43.169:9000", grpc.WithInsecure())
 
 	_ = err
 	defer connection.Close()
